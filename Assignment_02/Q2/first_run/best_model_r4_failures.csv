@@ -1,0 +1,268 @@
+index,user,gold,functions,output,error
+1,"I have a sentence in French that I need translated to English. The sentence is ""Je suis très heureux de vous rencontrer"".","{""name"": ""translate_text"", ""arguments"": {""text"": ""Je suis très heureux de vous rencontrer"", ""source_language"": ""French"", ""target_language"": ""English""}}",['translate_text'],"Sure, I can help with that. Here's the translation:
+
+""Very happy to meet you.""",refused_to_call
+3,I'm in New York and I'm craving for some Italian food. Can you find me some good Italian restaurants nearby?,"{""name"": ""find_nearby_restaurants"", ""arguments"": {""location"": ""New York"", ""cuisine"": ""Italian"", ""max_results"": 5}}",['find_nearby_restaurants'],"{""name"": ""find_nearby_restaurants"", ""arguments"": {""location"": ""New York"", ""cuisine"": ""Italian""}}",missing_argument
+6,"Hi, I need to get from New York to Los Angeles. Can you help me find the shortest path?","{""name"": ""find_shortest_path"", ""arguments"": {""source"": ""New York"", ""destination"": ""Los Angeles""}}",['find_shortest_path'],"Sure, I can help with that. Could you please provide me with your current location so I can calculate the shortest path for you?",refused_to_call
+13,"I have some chicken, broccoli, and cheese. Can you find me a recipe?","{""name"": ""search_recipe"", ""arguments"": {""ingredients"": [""chicken"", ""broccoli"", ""cheese""]}}",['search_recipe'],"{""name"": ""search_recipe"", ""arguments"": {""ingredients"": [""chicken"", ""broccoli"", ""cheese""], ""dietary_restrictions"": []}}",extra_argument
+15,"I need to create an invoice for my client, John Doe. The total amount is $5000 and it's due on 30th April.","{""name"": ""create_invoice"", ""arguments"": {""client_name"": ""John Doe"", ""amount"": 5000, ""due_date"": ""2022-04-30""}}","['create_invoice', 'calculate_area']","{""name"": ""create_invoice"", ""arguments"": {""client_name"": ""John Doe"", ""amount"": 5000, ""due_date"": ""2023-04-30""}}",wrong_argument_value
+16,"I need to schedule a meeting for tomorrow at 10 AM and it will end at 11 AM. The meeting is titled ""Project Discussion"" and it will be held in the conference room.","{""name"": ""create_calendar_event"", ""arguments"": {""title"": ""Project Discussion"", ""start_time"": ""2022-03-15 10:00:00"", ""end_time"": ""2022-03-15 11:00:00"", ""location"": ""conference room""}}",['create_calendar_event'],"{""name"": ""create_calendar_event"", ""arguments"": {""title"": ""Project Discussion"", ""start_time"": ""2023-04-05T10:00:00Z"", ""end_time"": ""2023-04-05T11:00:00Z"", ""location"": ""Conference Room""}}",wrong_argument_value
+18,"Hi, I need to convert 500 USD to EUR. Can you help me with that?","{""name"": ""convert_currency"", ""arguments"": {""amount"": 500, ""from"": ""USD"", ""to"": ""EUR""}}","['convert_currency', 'get_stock_price']","Sure, I can help with that. Here's the conversion:
+
+```json
+{
+  ""name"": ""convert_currency"",
+  ""arguments"": {
+    ""amount"": 500,
+    ""from"": ""USD"",
+    ""to"": ""EUR""
+  }
+}
+```",extra_text_around_json
+19,"Hi, I need to convert 1000 USD to Euros. Can you help me with that?","{""name"": ""convert_currency"", ""arguments"": {""amount"": 1000, ""from_currency"": ""USD"", ""to_currency"": ""EUR""}}","['convert_currency', 'create_note']","Sure, I can help with that. Here's the conversion:
+
+```json
+{
+  ""name"": ""convert_currency"",
+  ""arguments"": {
+    ""amount"": 1000,
+    ""from_currency"": ""USD"",
+    ""to_currency"": ""EUR""
+  }
+}
+```",extra_text_around_json
+21,"Hi, I need help with calculating my mortgage payment. I have a loan amount of $200,000, an annual interest rate of 3.5%, and a loan term of 30 years.","{""name"": ""calculate_mortgage_payment"", ""arguments"": {""loan_amount"": 200000, ""interest_rate"": 3.5, ""loan_term"": 30}}",['calculate_mortgage_payment'],"Sure, I can help with that. Let me calculate it for you.",refused_to_call
+25,"Hi, I saw a dress that I liked in a store. It was originally priced at $200 but there's a 20% discount on it. Can you tell me how much it will cost after the discount?","{""name"": ""calculate_discount"", ""arguments"": {""original_price"": 200, ""discount_percentage"": 20}}",['calculate_discount'],"Sure, I can help with that. Let's calculate the discounted price for you.
+
+```json
+{
+  ""name"": ""calculate_discount"",
+  ""arguments"": {
+    ""original_price"": 200,
+    ""discount_percentage"": 20
+  }
+}
+```",extra_text_around_json
+27,"Hi, I need to convert 1000 USD to EUR. Can you help me with that?","{""name"": ""convert_currency"", ""arguments"": {""amount"": 1000, ""from_currency"": ""USD"", ""to_currency"": ""EUR""}}","['convert_currency', 'find_nearest_gas_station']","Sure, I can help with that. Here's the conversion:
+
+```json
+{
+  ""name"": ""convert_currency"",
+  ""arguments"": {
+    ""amount"": 1000,
+    ""from_currency"": ""USD"",
+    ""to_currency"": ""EUR""
+  }
+}
+```",extra_text_around_json
+32,"Hi, I was born on 1990-05-15. Can you tell me how old I am today?","{""name"": ""calculate_age"", ""arguments"": {""birthdate"": ""1990-05-15""}}",['calculate_age'],"Sure! To calculate your age, we need to know today's date. Could you please provide it?",refused_to_call
+33,"Hi, I need to find a flight from New York to London on 15th of next month.","{""name"": ""search_flights"", ""arguments"": {""origin"": ""New York"", ""destination"": ""London"", ""date"": ""15th of next month""}}",['search_flights'],"{""name"": ""search_flights"", ""arguments"": {""origin"": ""New York"", ""destination"": ""London"", ""date"": ""2023-10-15""}}",wrong_argument_value
+41,"Hi, I need to convert 500 US dollars to Euros. Can you help me with that?","{""name"": ""convert_currency"", ""arguments"": {""amount"": 500, ""from_currency"": ""USD"", ""to_currency"": ""EUR""}}",['convert_currency'],"Sure, I can help with that. Here's the conversion:
+
+```json
+{
+  ""name"": ""convert_currency"",
+  ""arguments"": {
+    ""amount"": 500,
+    ""from_currency"": ""USD"",
+    ""to_currency"": ""EUR""
+  }
+}
+```",extra_text_around_json
+45,I need to generate an invoice for a customer named John Doe. He bought 2 apples for $1 each and 3 oranges for $2 each. The total amount is $8.,"{""name"": ""generate_invoice"", ""arguments"": {""customer_name"": ""John Doe"", ""items"": [{""name"": ""apple"", ""price"": 1, ""quantity"": 2}, {""name"": ""orange"", ""price"": 2, ""quantity"": 3}], ""total_amount"": 8}}",['generate_invoice'],"{""name"": ""generate_invoice"", ""arguments"": {""customer_name"": ""John Doe"", ""items"": [{""name"": ""apples"", ""price"": 1, ""quantity"": 2}, {""name"": ""oranges"", ""price"": 2, ""quantity"": 3}], ""total_amount"": 8}}",wrong_argument_value
+50,"Hi, I need to ship a package to New York. It weighs about 5 pounds. Can you tell me how much it would cost if I use the standard service?","{""name"": ""calculate_shipping_cost"", ""arguments"": {""weight"": 5, ""destination"": ""New York"", ""service"": ""standard""}}","['calculate_shipping_cost', 'calculate_tip']","Sure, I can help with that. Could you please provide me with your location and the total bill amount?",refused_to_call
+54,"Hi, I need help with calculating a tip. My bill amount is $50 and I want to give a 20% tip.","{""name"": ""calculate_tip"", ""arguments"": {""bill_amount"": 50, ""tip_percentage"": 20}}","['calculate_tip', 'get_movie_details']","Sure, I can help with that. Let's calculate it for you.
+
+```json
+{
+  ""name"": ""calculate_tip"",
+  ""arguments"": {
+    ""bill_amount"": 50,
+    ""tip_percentage"": 20
+  }
+}
+```",extra_text_around_json
+56,"Hi, I have a sentence in French that I need translated to English. The sentence is ""Je suis très heureux de vous rencontrer"".","{""name"": ""translate_text"", ""arguments"": {""text"": ""Je suis très heureux de vous rencontrer"", ""source_language"": ""French"", ""target_language"": ""English""}}","['translate_text', 'calculate_distance']","Sure, I can help with that. Here's the translation: ""I am very happy to meet you.""",refused_to_call
+61,"Hi, I have a list of numbers and I need to find the average. The numbers are 5, 10, 15, 20, 25.","{""name"": ""calculate_average"", ""arguments"": {""numbers"": [5, 10, 15, 20, 25]}}","['calculate_average', 'search_recipes_by_ingredients']","Sure, I can help with that. Here's the calculation:
+
+```json
+{
+  ""name"": ""calculate_average"",
+  ""arguments"": {
+    ""numbers"": [5, 10, 15, 20, 25]
+  }
+}
+```",extra_text_around_json
+62,"I have a sentence in French that I need translated to English. The sentence is ""Je suis très heureux de vous rencontrer.""","{""name"": ""translate_text"", ""arguments"": {""text"": ""Je suis très heureux de vous rencontrer."", ""source_language"": ""fr"", ""target_language"": ""en""}}",['translate_text'],"{""name"": ""translate_text"", ""arguments"": {""text"": ""Je suis très heureux de vous rencontrer."", ""source_language"": ""French"", ""target_language"": ""English""}}",wrong_argument_value
+64,I saw a dress that I liked. It was originally priced at $200 but there's a 20% discount on it. Can you tell me how much it will cost after the discount?,"{""name"": ""calculate_discount"", ""arguments"": {""original_price"": 200, ""discount_percentage"": 20}}","['calculate_discount', 'generate_qr_code']","Sure, I can help with that. Let's calculate the discounted price.
+
+```json
+{
+  ""name"": ""calculate_discount"",
+  ""arguments"": {
+    ""original_price"": 200,
+    ""discount_percentage"": 20
+  }
+}
+```",extra_text_around_json
+66,"Hi, I need to ship a package to New York. It weighs about 5 kilograms. Can you tell me how much it will cost?","{""name"": ""calculate_shipping_cost"", ""arguments"": {""weight"": 5, ""destination"": ""New York""}}",['calculate_shipping_cost'],"Sure, I can help with that. Could you please provide me with your location so we can calculate the shipping cost accurately?",refused_to_call
+67,"Hi, I am planning a trip to New York City on 2022-12-25. Can you tell me the sunrise and sunset times for that day?","{""name"": ""get_sunrise_sunset_time"", ""arguments"": {""location"": ""New York City"", ""date"": ""2022-12-25""}}","['get_sunrise_sunset_time', 'calculate_distance']","Sure, I can help with that. Let's get the sunrise and sunset times for New York City on December 25, 2022.
+
+{""name"": ""get_sunrise_sunset_time"", ""arguments"": {""location"": ""New York, NY"", ""date"": ""2022-12-25""}}",wrong_argument_value
+69,I need to create an invoice for a customer named John Doe. He bought 2 apples for $1 each and 3 oranges for $2 each.,"{""name"": ""create_invoice"", ""arguments"": {""customer_name"": ""John Doe"", ""items"": [{""name"": ""apple"", ""quantity"": 2, ""price"": 1}, {""name"": ""orange"", ""quantity"": 3, ""price"": 2}]}}",['create_invoice'],"{""name"": ""create_invoice"", ""arguments"": {""customer_name"": ""John Doe"", ""items"": [{""name"": ""apples"", ""quantity"": 2, ""price"": 1}, {""name"": ""oranges"", ""quantity"": 3, ""price"": 2}]}}",wrong_argument_value
+70,"Hi, I need help with calculating a tip. My bill amount is $100 and I want to give a 15% tip.","{""name"": ""calculate_tip"", ""arguments"": {""bill_amount"": 100, ""tip_percentage"": 15}}","['calculate_tip', 'get_news']","Sure, I can help with that. Let's calculate it together.
+{""name"": ""calculate_tip"", ""arguments"": {""bill_amount"": 100, ""tip_percentage"": 15}}",extra_text_around_json
+72,"Hi, I need help with calculating my loan payment. I borrowed $50000 at an annual interest rate of 5% and the term of the loan is 10 years.","{""name"": ""calculate_loan_payment"", ""arguments"": {""principal"": 50000, ""interest_rate"": 5, ""term"": 10}}",['calculate_loan_payment'],"Sure, I can help with that. Let's calculate your monthly payment first. Please provide me with the principal amount, interest rate, and term (in years) so we can proceed.",refused_to_call
+73,I'm looking for a recipe for a vegetarian lasagna.,"{""name"": ""search_recipes"", ""arguments"": {""query"": ""vegetarian lasagna"", ""diet"": ""vegetarian""}}",['search_recipes'],"{""name"": ""search_recipes"", ""arguments"": {""query"": ""vegetarian lasagna""}}",missing_argument
+76,"Hi, I need to calculate the factorial of 5. Can you help me with that?","{""name"": ""calculate_factorial"", ""arguments"": {""number"": 5}}",['calculate_factorial'],"Sure, I can help with that. Let's calculate the factorial of 5 together.",refused_to_call
+86,I'm in the mood for Italian food. Can you find any Italian restaurants near me?,"{""name"": ""search_restaurants"", ""arguments"": {""cuisine"": ""Italian"", ""location"": ""near me""}}","['search_restaurants', 'check_word_count']","{""name"": ""search_restaurants"", ""arguments"": {""cuisine"": ""Italian"", ""location"": """"}}",wrong_argument_value
+88,Can you get me the latest news headlines from the United States?,"{""name"": ""get_news_headlines"", ""arguments"": {""category"": ""general"", ""country"": ""US""}}",['get_news_headlines'],"{""name"": ""get_news_headlines"", ""arguments"": {""country"": ""United States""}}",missing_argument
+92,I need to create an invoice for a customer named John Doe. The invoice date is 2021-09-01 and the total amount is $500. The items are 5 chairs at $100 each.,"{""name"": ""create_invoice"", ""arguments"": {""customer_name"": ""John Doe"", ""invoice_date"": ""2021-09-01"", ""total_amount"": 500, ""items"": [{""name"": ""chair"", ""quantity"": 5, ""price"": 100}]}}","['create_invoice', 'get_random_joke']","{""name"": ""create_invoice"", ""arguments"": {""customer_name"": ""John Doe"", ""invoice_date"": ""2021-09-01"", ""total_amount"": 500, ""items"": [{""name"": ""chair"", ""quantity"": 5, ""price"": 100}]}",made_up_function
+96,"Hi, I need help with calculating the tip for my bill. The total amount is $50 and I want to leave a 15% tip.","{""name"": ""calculate_tip"", ""arguments"": {""bill_total"": 50, ""tip_percentage"": 15}}","['calculate_tip', 'send_email']","Sure, I can help with that. Let's calculate it together.
+
+```json
+{
+  ""name"": ""calculate_tip"",
+  ""arguments"": {
+    ""bill_total"": 50,
+    ""tip_percentage"": 15
+  }
+}
+```",extra_text_around_json
+97,"Hi, I need help with calculating a tip. My bill amount is $50 and I want to give a 15% tip.","{""name"": ""calculate_tip"", ""arguments"": {""bill_amount"": 50, ""tip_percentage"": 15}}","['calculate_tip', 'calculate_loan_payment']","Sure, I can help with that. Let's calculate it together.
+{""name"": ""calculate_tip"", ""arguments"": {""bill_amount"": 50, ""tip_percentage"": 15}}",extra_text_around_json
+100,"Hi, I need help with calculating a tip. My bill amount is $50 and I want to leave a 20% tip.","{""name"": ""calculate_tip"", ""arguments"": {""bill_amount"": 50, ""tip_percentage"": 20}}","['calculate_tip', 'generate_random_quote']","Sure, I can help with that. Let's calculate the tip for you.
+
+```json
+{
+  ""name"": ""calculate_tip"",
+  ""arguments"": {
+    ""bill_amount"": 50,
+    ""tip_percentage"": 20
+  }
+}
+```",extra_text_around_json
+104,I need to book a flight to Paris for 2 people. We want to leave on 15th June and return on 30th June.,"{""name"": ""book_flight"", ""arguments"": {""destination"": ""Paris"", ""departure_date"": ""2022-06-15"", ""return_date"": ""2022-06-30"", ""passengers"": 2}}",['book_flight'],"{""name"": ""book_flight"", ""arguments"": {""destination"": ""Paris"", ""departure_date"": ""15th June"", ""return_date"": ""30th June"", ""passengers"": 2}}",wrong_argument_value
+107,I want to watch a movie tonight. Can you suggest me some good action movies?,"{""name"": ""search_movies"", ""arguments"": {""genre"": ""action""}}",['search_movies'],"Sure! How about we look at some action movies that have high ratings? Let's start with something popular like ""Justice League"" or ""Avengers: Endgame"". Would you prefer more specific genres or just general recommendations?",refused_to_call
+115,"Hi, I need help with calculating my loan payment. I have a loan of $50000 with an annual interest rate of 5% and the term of the loan is 60 months.","{""name"": ""calculate_loan_payment"", ""arguments"": {""principal"": 50000, ""interest_rate"": 5, ""loan_term"": 60}}",['calculate_loan_payment'],"Sure, I can help with that. Let's calculate your monthly loan payment using the information you provided.
+
+Here are the parameters for our calculation:
+
+- Principal (P): $50000
+- Annual Interest Rate (r): 5%
+- Loan Term (n): 60 months
+
+We'll use the `calculate_loan_payment` function to find out how much you would pay each month.",refused_to_call
+120,"Hi, I need to convert 500 USD to Euros. Can you help me with that?","{""name"": ""convert_currency"", ""arguments"": {""amount"": 500, ""from_currency"": ""USD"", ""to_currency"": ""EUR""}}","['convert_currency', 'generate_random_password']","Sure, I can help with that. Here's the conversion for 500 USD to Euros: 476.91 Euros.",refused_to_call
+124,"Hi, I am planning a trip from New York to Los Angeles. Can you tell me the distance between these two cities?","{""name"": ""calculate_trip_distance"", ""arguments"": {""start_location"": ""New York"", ""end_location"": ""Los Angeles""}}",['calculate_trip_distance'],"Sure, I can help with that. Please provide me with your start and end locations so I can calculate the distance for you.",refused_to_call
+125,I am looking for books on the topic of artificial intelligence. Can you help me find some?,"{""name"": ""search_books"", ""arguments"": {""keywords"": [""artificial intelligence""]}}",['search_books'],"{""name"": ""search_books"", ""arguments"": {""keywords"": [""artificial intelligence""], ""author"": """", ""year"": """"}}",extra_argument
+128,"Hi, I need help with calculating the tip for my restaurant bill. The total bill amount is $100 and I want to leave a 15% tip.","{""name"": ""calculate_tip"", ""arguments"": {""bill_amount"": 100, ""tip_percentage"": 15}}",['calculate_tip'],"Sure, I can help with that. Let's calculate it together.",refused_to_call
+129,"Hi, I need help with calculating the tip for my bill. The total amount is $50 and I want to leave a 20% tip.","{""name"": ""calculate_tip"", ""arguments"": {""bill_amount"": 50, ""tip_percentage"": 20}}",['calculate_tip'],"Sure, I can help with that. Let's calculate it together.",refused_to_call
+133,"Hi, I need to convert 1000 US dollars to Euros. Can you help me with that?","{""name"": ""convert_currency"", ""arguments"": {""amount"": 1000, ""from"": ""USD"", ""to"": ""EUR""}}","['convert_currency', 'search_music']","Sure, I can help with that. Here's the conversion:
+
+```json
+{
+  ""name"": ""convert_currency"",
+  ""arguments"": {
+    ""amount"": 1000,
+    ""from"": ""USD"",
+    ""to"": ""EUR""
+  }
+}
+```",extra_text_around_json
+135,"Hi, I need to get from New York to Los Angeles. Can you find the shortest path for me?","{""name"": ""find_shortest_path"", ""arguments"": {""start_location"": ""New York"", ""end_location"": ""Los Angeles""}}",['find_shortest_path'],"Sure, I can help with that. Please provide me with your current location so we can calculate the route together.",refused_to_call
+140,"Hi, I need to get from New York to Los Angeles. Can you help me with the directions?","{""name"": ""get_directions"", ""arguments"": {""origin"": ""New York"", ""destination"": ""Los Angeles""}}",['get_directions'],"Of course! To provide you with accurate directions, could you please tell me your current location or where you're leaving from?",refused_to_call
+141,"Hi, I saw a dress that I liked in a store. It was priced at $100. They are offering a 20% discount. Can you tell me how much I will have to pay after the discount?","{""name"": ""calculate_discounted_price"", ""arguments"": {""original_price"": 100, ""discount_percentage"": 20}}",['calculate_discounted_price'],"Sure, I can help with that. Let's calculate it for you.
+
+```json
+{
+  ""name"": ""calculate_discounted_price"",
+  ""arguments"": {
+    ""original_price"": 100,
+    ""discount_percentage"": 20
+  }
+}
+```",extra_text_around_json
+146,I need to track my expenses. I just bought a new laptop for $1200 under the category of electronics.,"{""name"": ""track_expenses"", ""arguments"": {""expense_description"": ""New Laptop"", ""amount"": 1200, ""category"": ""Electronics""}}",['track_expenses'],"{""name"": ""track_expenses"", ""arguments"": {""expense_description"": ""Laptop purchase"", ""amount"": 1200, ""category"": ""electronics""}}",wrong_argument_value
+155,"Hi, I need to send a package to London. It weighs about 5 kilograms. Can you tell me how much it will cost to ship?","{""name"": ""calculate_shipping_cost"", ""arguments"": {""weight"": 5, ""destination"": ""London""}}",['calculate_shipping_cost'],"Sure, I can help with that. Could you please provide me with your location so we can calculate the shipping cost accurately?",refused_to_call
+156,"Hey, I want to know the sentiment of social media posts about the new iPhone. Can you analyze the last 100 posts for me?","{""name"": ""analyze_social_media_sentiment"", ""arguments"": {""keyword"": ""new iPhone"", ""count"": 100}}","['analyze_social_media_sentiment', 'calculate_bmi']","{""name"": ""analyze_social_media_sentiment"", ""arguments"": {""keyword"": ""new iphone"", ""count"": 100}}",wrong_argument_value
+165,"Hi, I need help with calculating the tip for my bill. The total bill is $50 and I want to leave a 15% tip.","{""name"": ""calculate_tip"", ""arguments"": {""total_bill"": 50, ""tip_percentage"": 15}}",['calculate_tip'],"Sure, I can help with that. Let's calculate it together.",refused_to_call
+168,"Hi, can you tell me the distance between New York and Los Angeles?","{""name"": ""calculate_distance"", ""arguments"": {""location1"": ""New York"", ""location2"": ""Los Angeles""}}",['calculate_distance'],"Sure! Here's the calculation for the distance between New York and Los Angeles using the available function:
+
+{
+  ""name"": ""calculate_distance"",
+  ""arguments"": {
+    ""location1"": ""New York"",
+    ""location2"": ""Los Angeles""
+  }
+}",extra_text_around_json
+171,"Hi, I need help calculating the tip for my bill. The total is $85 and I want to leave a 15% tip.","{""name"": ""calculate_tip"", ""arguments"": {""bill_total"": 85, ""tip_percentage"": 15}}","['calculate_tip', 'generate_password']","Sure, I can help with that. Let's calculate it together.
+{""name"": ""calculate_tip"", ""arguments"": {""bill_total"": 85, ""tip_percentage"": 0.15}}",wrong_argument_value
+174,"Hi, I need help with calculating the tip for my restaurant bill. The total bill was $100 and I want to leave a 15% tip.","{""name"": ""calculate_tip"", ""arguments"": {""bill_amount"": 100, ""tip_percentage"": 15}}","['calculate_tip', 'calculate_bmi']","Sure, I can help with that. Let's calculate it together.
+
+```json
+{
+  ""name"": ""calculate_tip"",
+  ""arguments"": {
+    ""bill_amount"": 100,
+    ""tip_percentage"": 15
+  }
+}
+```",extra_text_around_json
+184,"Hi, I need help with calculating my loan payment. I have a loan of $50000 with an annual interest rate of 5% and a term of 60 months.","{""name"": ""calculate_loan_payment"", ""arguments"": {""loan_amount"": 50000, ""interest_rate"": 5, ""loan_term"": 60}}","['calculate_loan_payment', 'generate_random_password']","Sure, I can help with that. Let's calculate your monthly loan payment using the information you provided.
+
+Here are the parameters for our calculation:
+
+- Loan Amount: $50,000
+- Annual Interest Rate: 5%
+- Loan Term (in months): 60
+
+Let's proceed with the calculation.
+  
+```json
+{
+  ""name"": ""calculate_loan_payment"",
+  ""arguments"": {
+    ""loan_amount"": 50000,
+    ""interest_rate"": 5,
+    ""loan_term"": 60
+  }
+}
+```",extra_text_around_json
+186,"Hi, I need help with calculating the tip for my bill. The total amount is $100 and I want to leave a 15% tip.","{""name"": ""calculate_tip"", ""arguments"": {""bill_amount"": 100, ""tip_percentage"": 15}}",['calculate_tip'],"Sure, I can help with that. Let's calculate it together.",refused_to_call
+188,"Hi, I saw a dress that I really liked. It was originally priced at $200 but it's on a 20% discount. Can you tell me how much it will cost after the discount?","{""name"": ""calculate_discount"", ""arguments"": {""original_price"": 200, ""discount_percentage"": 20}}","['calculate_discount', 'calculate_discount']","Sure! Let's calculate the discounted price.
+
+```json
+{
+  ""name"": ""calculate_discount"",
+  ""arguments"": {
+    ""original_price"": 200,
+    ""discount_percentage"": 20
+  }
+}
+```",extra_text_around_json
+189,I need to generate an invoice for a customer named John Doe. He bought 2 apples for $1 each and 3 oranges for $2 each.,"{""name"": ""generate_invoice"", ""arguments"": {""customer_name"": ""John Doe"", ""items"": [{""name"": ""apple"", ""quantity"": 2, ""price"": 1}, {""name"": ""orange"", ""quantity"": 3, ""price"": 2}]}}","['generate_invoice', 'calculate_discount']","{""name"": ""generate_invoice"", ""arguments"": {""customer_name"": ""John Doe"", ""items"": [{""name"": ""apples"", ""quantity"": 2, ""price"": 1}, {""name"": ""oranges"", ""quantity"": 3, ""price"": 2}]}}",wrong_argument_value
+191,"I have a list of numbers and I need to find the largest one. The numbers are 5, 7, 2, 9, 1, 6.","{""name"": ""find_largest_number"", ""arguments"": {""numbers"": [5, 7, 2, 9, 1, 6]}}","['find_largest_number', 'convert_temperature']","Sure, I can help with that. Here's the list you provided: [5, 7, 2, 9, 1, 6]. To find the largest number, we'll use the `find_largest_number` function. Let me call it now.",refused_to_call
+194,"I am looking for a book but I can't remember the full title. It's something like ""To Kill a..."".","{""name"": ""search_book"", ""arguments"": {""query"": ""To Kill a""}}","['search_book', 'calculate_gross_salary']","{""name"": ""search_book"", ""arguments"": {""query"": ""To Kill a...""}}",wrong_argument_value
+195,I saw a dress that I liked in a store. It was originally priced at $200 but there's a 20% discount on it. Can you tell me how much it will cost after the discount?,"{""name"": ""calculate_discount"", ""arguments"": {""original_price"": 200, ""discount_percentage"": 20}}",['calculate_discount'],"Sure, I can help with that. Let's calculate the discounted price for you.
+
+```json
+{
+  ""name"": ""calculate_discount"",
+  ""arguments"": {
+    ""original_price"": 200,
+    ""discount_percentage"": 20
+  }
+}
+```",extra_text_around_json
+199,I'm planning to buy a product that costs $500. The store is offering a 20% discount. Can you help me calculate the discounted price?,"{""name"": ""calculate_discounted_price"", ""arguments"": {""product_price"": 500, ""discount_percentage"": 20}}",['calculate_discounted_price'],"Sure, I can help with that. Let's calculate it together.
+
+```json
+{
+  ""name"": ""calculate_discounted_price"",
+  ""arguments"": {
+    ""product_price"": 500,
+    ""discount_percentage"": 20
+  }
+}
+```",extra_text_around_json

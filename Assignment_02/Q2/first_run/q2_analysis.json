@@ -1,0 +1,423 @@
+{
+ "qlora_percent": 0.1409587513492263,
+ "no_call_train": 270,
+ "stalls": 116,
+ "inline": 4,
+ "refusals": [
+  {
+   "run": "Baseline",
+   "refused": 1,
+   "refused_on_greeting": 1,
+   "opens_conversationally": 0
+  },
+  {
+   "run": "LoRA_r8",
+   "refused": 62,
+   "refused_on_greeting": 59,
+   "opens_conversationally": 64
+  },
+  {
+   "run": "QLoRA_r8",
+   "refused": 53,
+   "refused_on_greeting": 50,
+   "opens_conversationally": 57
+  },
+  {
+   "run": "DoRA_r8",
+   "refused": 62,
+   "refused_on_greeting": 59,
+   "opens_conversationally": 64
+  },
+  {
+   "run": "AdaLoRA_r4",
+   "refused": 21,
+   "refused_on_greeting": 18,
+   "opens_conversationally": 43
+  },
+  {
+   "run": "AdaLoRA_r8",
+   "refused": 33,
+   "refused_on_greeting": 29,
+   "opens_conversationally": 51
+  },
+  {
+   "run": "AdaLoRA_r16",
+   "refused": 42,
+   "refused_on_greeting": 35,
+   "opens_conversationally": 49
+  },
+  {
+   "run": "AdaLoRA_r32",
+   "refused": 47,
+   "refused_on_greeting": 43,
+   "opens_conversationally": 54
+  }
+ ],
+ "no_call_review": [
+  {
+   "run": "Baseline",
+   "calls_of_50": 40,
+   "calls_on_complete_9": 9,
+   "false_calls_missing_31": 29,
+   "false_calls_no_tool_10": 2,
+   "true_false_calls_of_41": 31
+  },
+  {
+   "run": "LoRA_r8",
+   "calls_of_50": 1,
+   "calls_on_complete_9": 1,
+   "false_calls_missing_31": 0,
+   "false_calls_no_tool_10": 0,
+   "true_false_calls_of_41": 0
+  },
+  {
+   "run": "QLoRA_r8",
+   "calls_of_50": 4,
+   "calls_on_complete_9": 4,
+   "false_calls_missing_31": 0,
+   "false_calls_no_tool_10": 0,
+   "true_false_calls_of_41": 0
+  },
+  {
+   "run": "DoRA_r8",
+   "calls_of_50": 1,
+   "calls_on_complete_9": 1,
+   "false_calls_missing_31": 0,
+   "false_calls_no_tool_10": 0,
+   "true_false_calls_of_41": 0
+  },
+  {
+   "run": "AdaLoRA_r4",
+   "calls_of_50": 6,
+   "calls_on_complete_9": 6,
+   "false_calls_missing_31": 0,
+   "false_calls_no_tool_10": 0,
+   "true_false_calls_of_41": 0
+  },
+  {
+   "run": "AdaLoRA_r8",
+   "calls_of_50": 4,
+   "calls_on_complete_9": 4,
+   "false_calls_missing_31": 0,
+   "false_calls_no_tool_10": 0,
+   "true_false_calls_of_41": 0
+  },
+  {
+   "run": "AdaLoRA_r16",
+   "calls_of_50": 5,
+   "calls_on_complete_9": 5,
+   "false_calls_missing_31": 0,
+   "false_calls_no_tool_10": 0,
+   "true_false_calls_of_41": 0
+  },
+  {
+   "run": "AdaLoRA_r32",
+   "calls_of_50": 5,
+   "calls_on_complete_9": 5,
+   "false_calls_missing_31": 0,
+   "false_calls_no_tool_10": 0,
+   "true_false_calls_of_41": 0
+  }
+ ],
+ "same": {
+  "test": 200,
+  "no_call": 46,
+  "company": 45
+ },
+ "ranks": [
+  {
+   "rank": 4,
+   "start_rank": 6,
+   "trainable": 1635088,
+   "effective": 970944,
+   "adapter_mb": 3.925128,
+   "peak_gb": 6.569525241851807,
+   "minutes": 15.795867335333348,
+   "json_valid": 156,
+   "tool": 0.89,
+   "tool_lo": 0.8390720169908702,
+   "tool_hi": 0.9262280983928396,
+   "full": 0.795,
+   "strict_tool": 0.78,
+   "refused": 21,
+   "false_calls": 6,
+   "company_tool": 0.9,
+   "train_loss": 0.3245175811979506
+  },
+  {
+   "rank": 8,
+   "start_rank": 12,
+   "trainable": 3270064,
+   "effective": 1936768,
+   "adapter_mb": 7.788704,
+   "peak_gb": 6.612143039703369,
+   "minutes": 15.790558093616657,
+   "json_valid": 148,
+   "tool": 0.825,
+   "tool_lo": 0.7663545078991807,
+   "tool_hi": 0.8713955882539106,
+   "full": 0.745,
+   "strict_tool": 0.74,
+   "refused": 33,
+   "false_calls": 4,
+   "company_tool": 0.85,
+   "train_loss": 0.40783947282367283
+  },
+  {
+   "rank": 16,
+   "start_rank": 24,
+   "trainable": 6540016,
+   "effective": 3876096,
+   "adapter_mb": 15.546392,
+   "peak_gb": 6.697377681732178,
+   "minutes": 14.441071659016668,
+   "json_valid": 150,
+   "tool": 0.785,
+   "tool_lo": 0.7229757022632792,
+   "tool_hi": 0.836282074363278,
+   "full": 0.72,
+   "strict_tool": 0.75,
+   "refused": 42,
+   "false_calls": 5,
+   "company_tool": 0.825,
+   "train_loss": 0.5439923588434855
+  },
+  {
+   "rank": 32,
+   "start_rank": 48,
+   "trainable": 13079920,
+   "effective": 7731712,
+   "adapter_mb": 30.96912,
+   "peak_gb": 6.867848873138428,
+   "minutes": 14.162897989549997,
+   "json_valid": 145,
+   "tool": 0.76,
+   "tool_lo": 0.69626534544272,
+   "tool_hi": 0.8139347314797533,
+   "full": 0.685,
+   "strict_tool": 0.725,
+   "refused": 47,
+   "false_calls": 5,
+   "company_tool": 0.825,
+   "train_loss": 0.7676809973186917
+  }
+ ],
+ "tests": {
+  "AdaLoRA_r4 vs AdaLoRA_r8": [
+   16,
+   3,
+   0.004425048828125
+  ],
+  "AdaLoRA_r8 vs AdaLoRA_r16": [
+   11,
+   3,
+   0.057373046875
+  ],
+  "AdaLoRA_r16 vs AdaLoRA_r32": [
+   9,
+   4,
+   0.266845703125
+  ],
+  "AdaLoRA_r4 vs AdaLoRA_r32": [
+   30,
+   4,
+   6.16488978266716e-06
+  ],
+  "AdaLoRA_r4 vs QLoRA_r8": [
+   39,
+   8,
+   5.539621596994948e-06
+  ],
+  "AdaLoRA_r8 vs QLoRA_r8": [
+   33,
+   15,
+   0.013283281562245008
+  ],
+  "QLoRA_r8 vs LoRA_r8": [
+   11,
+   2,
+   0.0224609375
+  ],
+  "Baseline vs AdaLoRA_r4": [
+   20,
+   0,
+   1.9073486328125e-06
+  ]
+ },
+ "alloc": {
+  "4": {
+   "k_proj": 5.6,
+   "o_proj": 3.5,
+   "q_proj": 1.2,
+   "v_proj": 5.7
+  },
+  "8": {
+   "k_proj": 11.3,
+   "o_proj": 6.7,
+   "q_proj": 2.5,
+   "v_proj": 11.5
+  },
+  "16": {
+   "k_proj": 22.9,
+   "o_proj": 12.6,
+   "q_proj": 5.9,
+   "v_proj": 22.6
+  },
+  "32": {
+   "k_proj": 46.7,
+   "o_proj": 25.3,
+   "q_proj": 11.1,
+   "v_proj": 44.9
+  }
+ },
+ "first50": {
+  "Baseline": 0.98,
+  "LoRA_r8": 0.66,
+  "QLoRA_r8": 0.64,
+  "DoRA_r8": 0.66,
+  "AdaLoRA_r4": 0.92,
+  "AdaLoRA_r8": 0.84,
+  "AdaLoRA_r16": 0.82,
+  "AdaLoRA_r32": 0.74
+ },
+ "company": [
+  {
+   "run": "Baseline",
+   "right_of_40": 38,
+   "id_right_of_29": 28,
+   "unauthorized_refunds": 0,
+   "unnecessary_calls": 0
+  },
+  {
+   "run": "LoRA_r8",
+   "right_of_40": 34,
+   "id_right_of_29": 27,
+   "unauthorized_refunds": 0,
+   "unnecessary_calls": 0
+  },
+  {
+   "run": "QLoRA_r8",
+   "right_of_40": 39,
+   "id_right_of_29": 29,
+   "unauthorized_refunds": 0,
+   "unnecessary_calls": 0
+  },
+  {
+   "run": "DoRA_r8",
+   "right_of_40": 34,
+   "id_right_of_29": 27,
+   "unauthorized_refunds": 0,
+   "unnecessary_calls": 0
+  },
+  {
+   "run": "AdaLoRA_r4",
+   "right_of_40": 36,
+   "id_right_of_29": 27,
+   "unauthorized_refunds": 0,
+   "unnecessary_calls": 0
+  },
+  {
+   "run": "AdaLoRA_r8",
+   "right_of_40": 34,
+   "id_right_of_29": 26,
+   "unauthorized_refunds": 0,
+   "unnecessary_calls": 0
+  },
+  {
+   "run": "AdaLoRA_r16",
+   "right_of_40": 33,
+   "id_right_of_29": 25,
+   "unauthorized_refunds": 0,
+   "unnecessary_calls": 0
+  },
+  {
+   "run": "AdaLoRA_r32",
+   "right_of_40": 33,
+   "id_right_of_29": 25,
+   "unauthorized_refunds": 0,
+   "unnecessary_calls": 0
+  }
+ ],
+ "chosen": [
+  {
+   "index": 21,
+   "user": "Hi, I need help with calculating my mortgage payment. I have a loan amount of $200,000, an annual interest rate of 3.5%, and a loan term of 30 years.",
+   "gold": "{\"name\": \"calculate_mortgage_payment\", \"arguments\": {\"loan_amount\": 200000, \"interest_rate\": 3.5, \"loan_term\": 30}}",
+   "functions": [
+    "calculate_mortgage_payment"
+   ],
+   "output": "Sure, I can help with that. Let me calculate it for you.",
+   "error": "refused_to_call"
+  },
+  {
+   "index": 18,
+   "user": "Hi, I need to convert 500 USD to EUR. Can you help me with that?",
+   "gold": "{\"name\": \"convert_currency\", \"arguments\": {\"amount\": 500, \"from\": \"USD\", \"to\": \"EUR\"}}",
+   "functions": [
+    "convert_currency",
+    "get_stock_price"
+   ],
+   "output": "Sure, I can help with that. Here's the conversion:\n\n```json\n{\n  \"name\": \"convert_currency\",\n  \"arguments\": {\n    \"amount\": 500,\n    \"from\": \"USD\",\n    \"to\": \"EUR\"\n  }\n}\n```",
+   "error": "extra_text_around_json"
+  },
+  {
+   "index": 92,
+   "user": "I need to create an invoice for a customer named John Doe. The invoice date is 2021-09-01 and the total amount is $500. The items are 5 chairs at $100 each.",
+   "gold": "{\"name\": \"create_invoice\", \"arguments\": {\"customer_name\": \"John Doe\", \"invoice_date\": \"2021-09-01\", \"total_amount\": 500, \"items\": [{\"name\": \"chair\", \"quantity\": 5, \"price\": 100}]}}",
+   "functions": [
+    "create_invoice",
+    "get_random_joke"
+   ],
+   "output": "{\"name\": \"create_invoice\", \"arguments\": {\"customer_name\": \"John Doe\", \"invoice_date\": \"2021-09-01\", \"total_amount\": 500, \"items\": [{\"name\": \"chair\", \"quantity\": 5, \"price\": 100}]}",
+   "error": "made_up_function"
+  },
+  {
+   "index": 15,
+   "user": "I need to create an invoice for my client, John Doe. The total amount is $5000 and it's due on 30th April.",
+   "gold": "{\"name\": \"create_invoice\", \"arguments\": {\"client_name\": \"John Doe\", \"amount\": 5000, \"due_date\": \"2022-04-30\"}}",
+   "functions": [
+    "create_invoice",
+    "calculate_area"
+   ],
+   "output": "{\"name\": \"create_invoice\", \"arguments\": {\"client_name\": \"John Doe\", \"amount\": 5000, \"due_date\": \"2023-04-30\"}}",
+   "error": "wrong_argument_value"
+  },
+  {
+   "index": 125,
+   "user": "I am looking for books on the topic of artificial intelligence. Can you help me find some?",
+   "gold": "{\"name\": \"search_books\", \"arguments\": {\"keywords\": [\"artificial intelligence\"]}}",
+   "functions": [
+    "search_books"
+   ],
+   "output": "{\"name\": \"search_books\", \"arguments\": {\"keywords\": [\"artificial intelligence\"], \"author\": \"\", \"year\": \"\"}}",
+   "error": "extra_argument"
+  }
+ ],
+ "failure_counts": [
+  [
+   "refused_to_call",
+   21
+  ],
+  [
+   "extra_text_around_json",
+   20
+  ],
+  [
+   "wrong_argument_value",
+   14
+  ],
+  [
+   "missing_argument",
+   3
+  ],
+  [
+   "extra_argument",
+   2
+  ],
+  [
+   "made_up_function",
+   1
+  ]
+ ],
+ "failures_conversational": 43
+}

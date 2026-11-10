@@ -1,0 +1,60 @@
+{
+  "description": "Small SaafHawa advisory knowledge base. Text is paraphrased from the cited sources. The roman_urdu_terms field was added for retrieval and is not part of any source.",
+  "accessed": "2026-11-04",
+  "chunks": [
+    {
+      "id": "who-heat-risk-groups",
+      "source": "WHO, Heat and health fact sheet (31 July 2026), https://www.who.int/news-room/fact-sheets/detail/climate-change-heat-and-health",
+      "text": "People most at risk from heat include adults over 65, infants and young children, people with heart, lung or kidney conditions, diabetes or mental health conditions, people with disabilities, people living alone, outdoor and manual workers, athletes, and low-income residents in poor housing or informal settlements without cooling.",
+      "roman_urdu_terms": "bachon bachay buzurg mazdoor garmi khatra bemar"
+    },
+    {
+      "id": "who-heat-illness",
+      "source": "WHO, Heat and health fact sheet (31 July 2026), https://www.who.int/news-room/fact-sheets/detail/climate-change-heat-and-health",
+      "text": "Heat can cause heat exhaustion and heatstroke. Heatstroke is a medical emergency with a high fatality rate. Heat also strains the heart and kidneys, can cause acute kidney injury and worsens chronic conditions.",
+      "roman_urdu_terms": "loo garmi lagna behoshi emergency hospital"
+    },
+    {
+      "id": "who-heat-outdoor-activity",
+      "source": "WHO, Heat and health fact sheet (31 July 2026), https://www.who.int/news-room/fact-sheets/detail/climate-change-heat-and-health",
+      "text": "Avoid strenuous activity during the hottest part of the day. Spend two to three hours of the day in shade or a cool place. Follow official heat warnings and never swim alone.",
+      "roman_urdu_terms": "jog dorna walk bahar dhoop saya samandar exercise dopahar"
+    },
+    {
+      "id": "who-heat-hydration-clothing",
+      "source": "WHO, Heat and health fact sheet (31 July 2026), https://www.who.int/news-room/fact-sheets/detail/climate-change-heat-and-health",
+      "text": "Drink regularly, about one cup per hour and at least two to three litres per day. Wear light, loose clothing, take cool showers and dampen the skin.",
+      "roman_urdu_terms": "pani peena kapray halkay nahana"
+    },
+    {
+      "id": "who-heat-children",
+      "source": "WHO, Heat and health fact sheet (31 July 2026), https://www.who.int/news-room/fact-sheets/detail/climate-change-heat-and-health",
+      "text": "Never leave children or animals in parked vehicles. Protect children with light clothing, hats, sunglasses and sunscreen. Cool an infant's stroller with a wet, thin cloth rather than dry fabric.",
+      "roman_urdu_terms": "bachon bachay school chutti gaari topi dhoop"
+    },
+    {
+      "id": "who-heat-home",
+      "source": "WHO, Heat and health fact sheet (31 July 2026), https://www.who.int/news-room/fact-sheets/detail/climate-change-heat-and-health",
+      "text": "Ventilate homes at night and keep windows and blinds closed during the day. Use fans only below 40 degrees Celsius. Set air conditioning to 27 degrees Celsius with a fan running. Check on vulnerable people in the community.",
+      "roman_urdu_terms": "ghar pankha AC khirki raat parosi"
+    },
+    {
+      "id": "who-air-health-effects",
+      "source": "WHO, Ambient (outdoor) air quality and health fact sheet (24 October 2024), https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health",
+      "text": "Fine particulate matter is linked to cardiovascular disease, respiratory disease and cancers. Air pollution is among the greatest environmental risks to child health.",
+      "roman_urdu_terms": "aloodgi dhuan smog saans dama asthma bachon hawa"
+    },
+    {
+      "id": "who-aqg-2021-values",
+      "source": "WHO Global Air Quality Guidelines (2021), https://www.who.int/publications/i/item/9789240034228",
+      "text": "WHO guideline levels are 15 micrograms per cubic metre for 24-hour PM2.5 and 45 micrograms per cubic metre for 24-hour PM10. Annual guideline levels are 5 for PM2.5 and 15 for PM10.",
+      "roman_urdu_terms": "pm2.5 pm10 had hawa ki quality aloodgi safe mehfooz"
+    },
+    {
+      "id": "ndma-public-advice",
+      "source": "NDMA Pakistan public heat advisory as reported by Associated Press of Pakistan, https://www.app.com.pk/national/ndma-advises-precautionary-measures-as-intense-heatwave-to-grip-multiple-regions/",
+      "text": "During a heatwave, avoid unnecessary exposure to direct sunlight, stay hydrated and follow official updates from NDMA, the Pakistan Meteorological Department and provincial authorities. Report emergencies to the local helpline or PDMA control room.",
+      "roman_urdu_terms": "heatwave garmi ki lehar dhoop pani helpline PDMA NDMA"
+    }
+  ]
+}

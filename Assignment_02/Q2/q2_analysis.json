@@ -1,0 +1,605 @@
+{
+ "same_test": true,
+ "base_same": {
+  "test": 200,
+  "no_call": 50,
+  "company": 50
+ },
+ "meta": {
+  "old_no_call_train": 270,
+  "old_no_call_train_really_calls": 108,
+  "train_calls_announced_first": 432
+ },
+ "overlap": 1376,
+ "comparison": [
+  {
+   "run": "LoRA_r8",
+   "tool_first": 0.69,
+   "tool_second": 0.995,
+   "full_first": 0.65,
+   "full_second": 0.935,
+   "json_first": 136,
+   "json_second": 199
+  },
+  {
+   "run": "QLoRA_r8",
+   "tool_first": 0.735,
+   "tool_second": 0.995,
+   "full_first": 0.685,
+   "full_second": 0.93,
+   "json_first": 143,
+   "json_second": 199
+  },
+  {
+   "run": "DoRA_r8",
+   "tool_first": 0.69,
+   "tool_second": 0.995,
+   "full_first": 0.65,
+   "full_second": 0.935,
+   "json_first": 136,
+   "json_second": 199
+  },
+  {
+   "run": "AdaLoRA_r8",
+   "tool_first": 0.825,
+   "tool_second": 0.975,
+   "full_first": 0.745,
+   "full_second": 0.895,
+   "json_first": 148,
+   "json_second": 194
+  }
+ ],
+ "review": [
+  {
+   "run": "Baseline",
+   "calls_of_50": 40,
+   "false_of_43": 33,
+   "false_of_41_by_hand": 31
+  },
+  {
+   "run": "LoRA_r4",
+   "calls_of_50": 9,
+   "false_of_43": 2,
+   "false_of_41_by_hand": 0
+  },
+  {
+   "run": "LoRA_r8",
+   "calls_of_50": 9,
+   "false_of_43": 2,
+   "false_of_41_by_hand": 0
+  },
+  {
+   "run": "LoRA_r16",
+   "calls_of_50": 9,
+   "false_of_43": 2,
+   "false_of_41_by_hand": 0
+  },
+  {
+   "run": "LoRA_r32",
+   "calls_of_50": 9,
+   "false_of_43": 2,
+   "false_of_41_by_hand": 0
+  },
+  {
+   "run": "QLoRA_r8",
+   "calls_of_50": 9,
+   "false_of_43": 2,
+   "false_of_41_by_hand": 0
+  },
+  {
+   "run": "DoRA_r8",
+   "calls_of_50": 9,
+   "false_of_43": 2,
+   "false_of_41_by_hand": 0
+  },
+  {
+   "run": "AdaLoRA_r8",
+   "calls_of_50": 9,
+   "false_of_43": 2,
+   "false_of_41_by_hand": 0
+  }
+ ],
+ "tests": {
+  "Baseline vs LoRA_r8": {
+   "tool": {
+    "a": 1,
+    "b": 2,
+    "p": 1.0
+   },
+   "full": {
+    "a": 4,
+    "b": 11,
+    "p": 0.11846923828125
+   },
+   "company": {
+    "a": 10,
+    "b": 1,
+    "p": 0.01171875
+   },
+   "no_false": {
+    "a": 0,
+    "b": 31,
+    "p": 9.313225746154785e-10
+   }
+  },
+  "Baseline vs QLoRA_r8": {
+   "tool": {
+    "a": 1,
+    "b": 2,
+    "p": 1.0
+   },
+   "full": {
+    "a": 5,
+    "b": 11,
+    "p": 0.210113525390625
+   },
+   "company": {
+    "a": 5,
+    "b": 1,
+    "p": 0.21875
+   },
+   "no_false": {
+    "a": 0,
+    "b": 31,
+    "p": 9.313225746154785e-10
+   }
+  },
+  "LoRA_r8 vs QLoRA_r8": {
+   "tool": {
+    "a": 0,
+    "b": 0,
+    "p": 1.0
+   },
+   "full": {
+    "a": 2,
+    "b": 1,
+    "p": 1.0
+   },
+   "company": {
+    "a": 0,
+    "b": 5,
+    "p": 0.0625
+   },
+   "no_false": {
+    "a": 0,
+    "b": 0,
+    "p": 1.0
+   }
+  },
+  "LoRA_r8 vs AdaLoRA_r8": {
+   "tool": {
+    "a": 5,
+    "b": 1,
+    "p": 0.21875
+   },
+   "full": {
+    "a": 11,
+    "b": 3,
+    "p": 0.057373046875
+   },
+   "company": {
+    "a": 1,
+    "b": 8,
+    "p": 0.0390625
+   },
+   "no_false": {
+    "a": 0,
+    "b": 0,
+    "p": 1.0
+   }
+  },
+  "QLoRA_r8 vs AdaLoRA_r8": {
+   "tool": {
+    "a": 5,
+    "b": 1,
+    "p": 0.21875
+   },
+   "full": {
+    "a": 11,
+    "b": 4,
+    "p": 0.11846923828125
+   },
+   "company": {
+    "a": 2,
+    "b": 4,
+    "p": 0.6875
+   },
+   "no_false": {
+    "a": 0,
+    "b": 0,
+    "p": 1.0
+   }
+  },
+  "LoRA_r4 vs LoRA_r8": {
+   "tool": {
+    "a": 0,
+    "b": 0,
+    "p": 1.0
+   },
+   "full": {
+    "a": 1,
+    "b": 1,
+    "p": 1.0
+   },
+   "company": {
+    "a": 1,
+    "b": 5,
+    "p": 0.21875
+   },
+   "no_false": {
+    "a": 0,
+    "b": 0,
+    "p": 1.0
+   }
+  },
+  "LoRA_r8 vs LoRA_r16": {
+   "tool": {
+    "a": 0,
+    "b": 1,
+    "p": 1.0
+   },
+   "full": {
+    "a": 2,
+    "b": 2,
+    "p": 1.0
+   },
+   "company": {
+    "a": 0,
+    "b": 3,
+    "p": 0.25
+   },
+   "no_false": {
+    "a": 0,
+    "b": 0,
+    "p": 1.0
+   }
+  },
+  "LoRA_r16 vs LoRA_r32": {
+   "tool": {
+    "a": 0,
+    "b": 0,
+    "p": 1.0
+   },
+   "full": {
+    "a": 0,
+    "b": 2,
+    "p": 0.5
+   },
+   "company": {
+    "a": 3,
+    "b": 0,
+    "p": 0.25
+   },
+   "no_false": {
+    "a": 0,
+    "b": 0,
+    "p": 1.0
+   }
+  },
+  "LoRA_r4 vs LoRA_r32": {
+   "tool": {
+    "a": 0,
+    "b": 1,
+    "p": 1.0
+   },
+   "full": {
+    "a": 3,
+    "b": 5,
+    "p": 0.7265625
+   },
+   "company": {
+    "a": 2,
+    "b": 6,
+    "p": 0.2890625
+   },
+   "no_false": {
+    "a": 0,
+    "b": 0,
+    "p": 1.0
+   }
+  },
+  "LoRA_r8 vs LoRA_r32": {
+   "tool": {
+    "a": 0,
+    "b": 1,
+    "p": 1.0
+   },
+   "full": {
+    "a": 2,
+    "b": 4,
+    "p": 0.6875
+   },
+   "company": {
+    "a": 1,
+    "b": 1,
+    "p": 1.0
+   },
+   "no_false": {
+    "a": 0,
+    "b": 0,
+    "p": 1.0
+   }
+  }
+ },
+ "ranks": [
+  {
+   "rank": 4,
+   "trainable": 1089536,
+   "percent": 0.07052908413277896,
+   "adapter_mb": 4.387504,
+   "peak_gb": 6.539360046386719,
+   "minutes": 11.25394124931666,
+   "json_valid": 199,
+   "tool": 0.995,
+   "tool_lo": 0.9722256001302286,
+   "tool_hi": 0.999116854010634,
+   "full": 0.935,
+   "false_43": 2,
+   "company": 25,
+   "company_lo": 0.47032160054531913,
+   "company_hi": 0.7577722646420829
+  },
+  {
+   "rank": 8,
+   "trainable": 2179072,
+   "percent": 0.1409587513492263,
+   "adapter_mb": 8.745704,
+   "peak_gb": 6.550780296325684,
+   "minutes": 11.231143857183334,
+   "json_valid": 199,
+   "tool": 0.995,
+   "tool_lo": 0.9722256001302286,
+   "tool_hi": 0.999116854010634,
+   "full": 0.935,
+   "false_43": 2,
+   "company": 29,
+   "company_lo": 0.5716474916687543,
+   "company_hi": 0.8389214656685692
+  },
+  {
+   "rank": 16,
+   "trainable": 4358144,
+   "percent": 0.28152067467064695,
+   "adapter_mb": 17.462432,
+   "peak_gb": 6.575889587402344,
+   "minutes": 11.252355480716671,
+   "json_valid": 200,
+   "tool": 1.0,
+   "tool_lo": 0.9811539940816791,
+   "tool_hi": 1.0,
+   "full": 0.935,
+   "false_43": 2,
+   "company": 32,
+   "company_lo": 0.6524239261814333,
+   "company_hi": 0.8950013502683314
+  },
+  {
+   "rank": 32,
+   "trainable": 8716288,
+   "percent": 0.5614607213305933,
+   "adapter_mb": 34.895152,
+   "peak_gb": 6.624595642089844,
+   "minutes": 11.262224434450006,
+   "json_valid": 200,
+   "tool": 1.0,
+   "tool_lo": 0.9811539940816791,
+   "tool_hi": 1.0,
+   "full": 0.945,
+   "false_43": 2,
+   "company": 29,
+   "company_lo": 0.5716474916687543,
+   "company_hi": 0.8389214656685692
+  }
+ ],
+ "alloc": {
+  "k_proj": 11.5,
+  "o_proj": 6.3,
+  "q_proj": 2.5,
+  "v_proj": 11.7
+ },
+ "kinds": {
+  "LoRA_r8": {
+   "right_tool": 50
+  },
+  "QLoRA_r8": {
+   "right_tool": 43,
+   "no_call": 7
+  },
+  "DoRA_r8": {
+   "right_tool": 50
+  },
+  "LoRA_r32": {
+   "right_tool": 50
+  }
+ },
+ "company": [
+  {
+   "run": "Baseline",
+   "right_40": 38,
+   "wrong_tool": 2,
+   "no_call": 0,
+   "id_29": 28,
+   "roman_urdu_4": 4,
+   "escalate_10": 10,
+   "refunds": 0,
+   "unnecessary": 0
+  },
+  {
+   "run": "LoRA_r4",
+   "right_40": 25,
+   "wrong_tool": 1,
+   "no_call": 14,
+   "id_29": 19,
+   "roman_urdu_4": 1,
+   "escalate_10": 5,
+   "refunds": 0,
+   "unnecessary": 0
+  },
+  {
+   "run": "LoRA_r8",
+   "right_40": 29,
+   "wrong_tool": 1,
+   "no_call": 10,
+   "id_29": 23,
+   "roman_urdu_4": 1,
+   "escalate_10": 5,
+   "refunds": 0,
+   "unnecessary": 0
+  },
+  {
+   "run": "LoRA_r16",
+   "right_40": 32,
+   "wrong_tool": 1,
+   "no_call": 7,
+   "id_29": 24,
+   "roman_urdu_4": 1,
+   "escalate_10": 7,
+   "refunds": 0,
+   "unnecessary": 0
+  },
+  {
+   "run": "LoRA_r32",
+   "right_40": 29,
+   "wrong_tool": 1,
+   "no_call": 10,
+   "id_29": 23,
+   "roman_urdu_4": 1,
+   "escalate_10": 5,
+   "refunds": 0,
+   "unnecessary": 0
+  },
+  {
+   "run": "QLoRA_r8",
+   "right_40": 34,
+   "wrong_tool": 1,
+   "no_call": 5,
+   "id_29": 26,
+   "roman_urdu_4": 2,
+   "escalate_10": 7,
+   "refunds": 0,
+   "unnecessary": 0
+  },
+  {
+   "run": "DoRA_r8",
+   "right_40": 29,
+   "wrong_tool": 1,
+   "no_call": 10,
+   "id_29": 23,
+   "roman_urdu_4": 1,
+   "escalate_10": 5,
+   "refunds": 0,
+   "unnecessary": 0
+  },
+  {
+   "run": "AdaLoRA_r8",
+   "right_40": 36,
+   "wrong_tool": 2,
+   "no_call": 2,
+   "id_29": 27,
+   "roman_urdu_4": 2,
+   "escalate_10": 9,
+   "refunds": 0,
+   "unnecessary": 0
+  }
+ ],
+ "chosen": [
+  {
+   "index": 194,
+   "user": "I am looking for a book but I can't remember the full title. It's something like \"To Kill a...\".",
+   "gold": "{\"name\": \"search_book\", \"arguments\": {\"query\": \"To Kill a\"}}",
+   "functions": [
+    "search_book",
+    "calculate_gross_salary"
+   ],
+   "output": "Sure, I can help with that. Could you please tell me more about the author?",
+   "error": "refused_to_call"
+  },
+  {
+   "index": 33,
+   "user": "Hi, I need to find a flight from New York to London on 15th of next month.",
+   "gold": "{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"New York\", \"destination\": \"London\", \"date\": \"15th of next month\"}}",
+   "functions": [
+    "search_flights"
+   ],
+   "output": "{\"name\": \"search_flights\", \"arguments\": {\"origin\": \"New York\", \"destination\": \"London\", \"date\": \"2023-04-15\"}}",
+   "error": "wrong_argument_value"
+  },
+  {
+   "index": 86,
+   "user": "I'm in the mood for Italian food. Can you find any Italian restaurants near me?",
+   "gold": "{\"name\": \"search_restaurants\", \"arguments\": {\"cuisine\": \"Italian\", \"location\": \"near me\"}}",
+   "functions": [
+    "search_restaurants",
+    "check_word_count"
+   ],
+   "output": "{\"name\": \"search_restaurants\", \"arguments\": {\"cuisine\": \"Italian\"}}",
+   "error": "missing_argument"
+  },
+  {
+   "index": 153,
+   "user": "I have a jacket that costs $100. I have a 10% off coupon and a 20% off store discount. Can you tell me how much I will have to pay after applying these discounts?",
+   "gold": "{\"name\": \"calculate_discounted_price\", \"arguments\": {\"original_price\": 100, \"discounts\": [{\"percentage\": 0.1, \"description\": \"10% off coupon\"}, {\"percentage\": 0.2, \"description\": \"20% off store discount\"}]}}",
+   "functions": [
+    "calculate_discounted_price",
+    "calculate_loan_payment"
+   ],
+   "output": "{\"name\": \"calculate_discounted_price\", \"arguments\": {\"original_price\": 100, \"discounts\": [{\"percentage\": 10, \"description\": \"10% off coupon\"}, {\"percentage\": 20, \"description\": \"20% off store discount\"}]}}",
+   "error": "wrong_argument_value"
+  },
+  {
+   "index": 1,
+   "user": "I have a sentence in French that I need translated to English. The sentence is \"Je suis très heureux de vous rencontrer\".",
+   "gold": "{\"name\": \"translate_text\", \"arguments\": {\"text\": \"Je suis très heureux de vous rencontrer\", \"source_language\": \"French\", \"target_language\": \"English\"}}",
+   "functions": [
+    "translate_text"
+   ],
+   "output": "{\"name\": \"translate_text\", \"arguments\": {\"text\": \"Je suis très heureux de vous rencontrer\", \"source_language\": \"fr\", \"target_language\": \"en\"}}",
+   "error": "wrong_argument_value"
+  }
+ ],
+ "failure_counts": [
+  [
+   "wrong_argument_value",
+   10
+  ],
+  [
+   "missing_argument",
+   3
+  ],
+  [
+   "refused_to_call",
+   1
+  ]
+ ],
+ "same": {
+  "test": 200,
+  "no_call": 48,
+  "company": 42
+ },
+ "sizes": {
+  "LoRA_r4": 4.4,
+  "LoRA_r8": 8.7,
+  "LoRA_r16": 17.5,
+  "LoRA_r32": 34.9,
+  "QLoRA_r8": 8.7,
+  "DoRA_r8": 9.2,
+  "AdaLoRA_r8": 7.7
+ },
+ "first_merge": [
+  {
+   "run": "QLoRA",
+   "state": "adapter attached",
+   "tokens_per_second": 44.33820004269104,
+   "peak_memory_gb": 1.3557205200195312,
+   "tool_accuracy": 0.64
+  },
+  {
+   "run": "QLoRA",
+   "state": "merged",
+   "tokens_per_second": 61.84991479277655,
+   "peak_memory_gb": 1.3477354049682617,
+   "tool_accuracy": 0.84,
+   "same_output_as_unmerged": 0.34
+  }
+ ]
+}
